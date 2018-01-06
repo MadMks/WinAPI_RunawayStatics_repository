@@ -1,6 +1,7 @@
 #include <windows.h>
 #include "resource.h"
 //using namespace std;
+//
 
 #define AROUND_THE_STATICS 25
 #define SIZE_STATIC 25
