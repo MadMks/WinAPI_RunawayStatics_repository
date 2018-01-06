@@ -259,46 +259,19 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam)
 				(HIWORD(lParam) > rcStaticRect.bottom)
 				)
 			{
-
-				/*if (
-				(rcStaticRect.right >
-				(rcClientRect.right - (widthClientRect / 6)))
-				&&
-				(rcStaticRect.top <
-				(rcClientRect.top + (heightClientRect / 2)))
-				)
-				{
-				MoveRight(hStatic, rcStaticRect, rcClientRect);
-				MoveDown(hStatic, rcStaticRect, rcClientRect);
-				}
-				else
-				{*/
 				MoveRight(hStatic, rcStaticRect, rcClientRect);
 				MoveUp(hStatic, rcStaticRect, rcClientRect);
-				/*}*/
 			}
 			// Слева сверху (диагональ)
-			/*else if (
-			(LOWORD(lParam) < rcStaticRect.left)
-			&&
-			(HIWORD(lParam) < rcStaticRect.top)
-			)
+			else if (
+				(LOWORD(lParam) < rcStaticRect.left)
+				&&
+				(HIWORD(lParam) < rcStaticRect.top)
+				)
 			{
-			if (
-			(rcStaticRect.right >
-			(rcClientRect.right - (widthClientRect / 6)))
-			)
-			{
-			MoveLeft(hStatic, rcStaticRect, rcClientRect);
-			MoveUp(hStatic, rcStaticRect, rcClientRect);
+				MoveRight(hStatic, rcStaticRect, rcClientRect);
+				MoveDown(hStatic, rcStaticRect, rcClientRect);
 			}
-			else
-			{
-			MoveRight(hStatic, rcStaticRect, rcClientRect);
-			MoveDown(hStatic, rcStaticRect, rcClientRect);
-			}
-
-			}*/
 
 
 
